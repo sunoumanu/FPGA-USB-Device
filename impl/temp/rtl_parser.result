@@ -1,0 +1,72 @@
+[
+ {
+  "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/fpga_examples/fpga_top_usb_mouse_gowin.v",
+  "InstLine" : 9,
+  "InstName" : "fpga_top_usb_mouse_gowin",
+  "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/fpga_examples/fpga_top_usb_mouse_gowin.v",
+  "ModuleLine" : 9,
+  "ModuleName" : "fpga_top_usb_mouse_gowin",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/fpga_examples/fpga_top_usb_mouse_gowin.v",
+    "InstLine" : 43,
+    "InstName" : "u_pll",
+    "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/gowin_pll/Gowin_PLL.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "Gowin_PLL"
+   },
+   {
+    "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/fpga_examples/fpga_top_usb_mouse_gowin.v",
+    "InstLine" : 61,
+    "InstName" : "usb_mouse_i",
+    "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usb_class/usb_mouse_top.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "usb_mouse_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usb_class/usb_mouse_top.v",
+      "InstLine" : 117,
+      "InstName" : "u_usbfs_core",
+      "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_core_top.v",
+      "ModuleLine" : 9,
+      "ModuleName" : "usbfs_core_top",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_core_top.v",
+        "InstLine" : 175,
+        "InstName" : "u_usbfs_bitlevel",
+        "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_bitlevel.v",
+        "ModuleLine" : 12,
+        "ModuleName" : "usbfs_bitlevel"
+       },
+       {
+        "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_core_top.v",
+        "InstLine" : 198,
+        "InstName" : "u_usbfs_packet_rx",
+        "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_packet_rx.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "usbfs_packet_rx"
+       },
+       {
+        "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_core_top.v",
+        "InstLine" : 218,
+        "InstName" : "u_usbfs_packet_tx",
+        "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_packet_tx.v",
+        "ModuleLine" : 10,
+        "ModuleName" : "usbfs_packet_tx"
+       },
+       {
+        "InstFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_core_top.v",
+        "InstLine" : 259,
+        "InstName" : "u_usbfs_transaction",
+        "ModuleFile" : "C:/soft/dev/hardware/hid4/FPGA-USB-Device/RTL/usbfs_core/usbfs_transaction.v",
+        "ModuleLine" : 14,
+        "ModuleName" : "usbfs_transaction"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,31 @@
+WARN  (CM1011) : The input VCC is illegal, default VCC '1.0' is setted.
+Reading netlist file: "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\gwsynthesis\usb_mouse.vg"
+Parsing netlist file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\gwsynthesis\usb_mouse.vg" completed
+WARN  (PA1019) : Invalid VCO frequency '(FCLKIN*(FBDIV_SEL+1)*ODIV_SEL)/(IDIV_SEL+1)' to 'pll_inst'(PLL) set by 'Gowin_PLL' of module, suitable range is from 500MHz to 1250MHz.
+Processing netlist completed
+Reading constraint file: "C:\soft\dev\hardware\hid4\FPGA-USB-Device\tang_nano_20k.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\pnr\usb_mouse.power.html" completed
+Generate file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\pnr\usb_mouse.pin.html" completed
+Generate file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\pnr\usb_mouse.rpt.html" completed
+Generate file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\pnr\usb_mouse.rpt.txt" completed
+Generate file "C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\pnr\usb_mouse.tr.html" completed
+Fri Jan 16 00:40:18 2026
+

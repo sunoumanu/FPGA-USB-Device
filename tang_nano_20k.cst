@@ -1,33 +1,42 @@
-// Physical Constraints File (CST) for Tang Nano 20k
-// Adjust pin numbers based on your actual wiring!
+// Physical Constraints File (CST) for Tang Nano 20k (GW2A-18C PBGA256)
+// Pin assignments based on Tang Nano 20K schematic v1.3
+// Reference: https://wiki.sipeed.com/hardware/en/tang/tang-nano-20k/nano-20k.html
 
 // Clock (27MHz onboard oscillator)
-IO_LOC "sys_clk" 4;
-IO_PORT "sys_clk" PULL_MODE=UP;
+IO_LOC "sys_clk" H11;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
 
-// Reset Button (S1 or S2)
-IO_LOC "button" 88; // S1 button
-IO_PORT "button" PULL_MODE=UP;
+// Reset Button (S1 button - active low)
+IO_LOC "button" T13; // S1 button
+IO_PORT "button" IO_TYPE=LVCMOS33 PULL_MODE=UP;
 
-// LEDs (Active Low)
-IO_LOC "led[0]" 15;
-IO_LOC "led[1]" 16;
-IO_LOC "led[2]" 17;
-IO_LOC "led[3]" 18;
-IO_LOC "led[4]" 19;
-IO_LOC "led[5]" 20;
+// LEDs (Active Low) - corrected pin assignments
+IO_LOC "led[0]" L16; // LED0
+IO_LOC "led[1]" L14; // LED1
+IO_LOC "led[2]" N14; // LED2
+IO_LOC "led[3]" N16; // LED3
+IO_LOC "led[4]" M15; // LED4
+IO_LOC "led[5]" M16; // LED5
+IO_PORT "led[0]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_PORT "led[1]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_PORT "led[2]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_PORT "led[3]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_PORT "led[4]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_PORT "led[5]" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
 
 // USB Signals - CONNECT THESE TO YOUR USB BREAKOUT BOARD
-// Example using pins 25, 26, 27. CHANGE THESE to match your wiring.
-IO_LOC "usb_dp" 25;
-IO_PORT "usb_dp" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+// Please check your board schematics or wiring to confirm these pins.
+// Using GPIO pins from expansion headers (should support 3.3V I/O)
+// NOTE: You will need to wire these pins to your USB connector
+IO_LOC "usb_dp" K14;
+IO_PORT "usb_dp" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
 
-IO_LOC "usb_dn" 26;
-IO_PORT "usb_dn" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_LOC "usb_dn" J14;
+IO_PORT "usb_dn" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
 
-IO_LOC "usb_dp_pull" 27;
-IO_PORT "usb_dp_pull" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8;
+IO_LOC "usb_dp_pull" K15;
+IO_PORT "usb_dp_pull" IO_TYPE=LVCMOS33 PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
 
 // Optional UART
-IO_LOC "uart_tx" 69; // Pin 69 is often UART TX
+IO_LOC "uart_tx" M11; 
 IO_PORT "uart_tx" IO_TYPE=LVCMOS33;

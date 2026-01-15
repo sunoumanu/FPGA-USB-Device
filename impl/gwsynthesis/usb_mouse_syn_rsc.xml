@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="fpga_top_usb_mouse_gowin" Register="50" Alu="39" Lut="24" T_Register="372(50)" T_Alu="39(39)" T_Lut="738(24)">
+ <SubModule name="u_pll"/>
+ <SubModule name="usb_mouse_i" Register="24" Lut="58" T_Register="322(24)" T_Lut="714(58)">
+  <SubModule name="u_usbfs_core" Register="34" Lut="120" T_Register="298(34)" T_Lut="656(120)">
+   <SubModule name="u_usbfs_bitlevel" Register="30" Lut="104" T_Register="30(30)" T_Lut="104(104)"/>
+   <SubModule name="u_usbfs_packet_rx" Register="74" Lut="91" T_Register="74(74)" T_Lut="91(91)"/>
+   <SubModule name="u_usbfs_packet_tx" Register="33" Lut="100" T_Register="33(33)" T_Lut="100(100)"/>
+   <SubModule name="u_usbfs_transaction" Register="127" Lut="241" T_Register="127(127)" T_Lut="241(241)"/>
+  </SubModule>
+ </SubModule>
+</Module>

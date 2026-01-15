@@ -79,11 +79,11 @@ reg  [ 7:0] ep00_resp;
 //   Byte 1: X movement (signed byte, -127 to +127)
 //   Byte 2: Y movement (signed byte, -127 to +127)
 //   Byte 3: Wheel movement (signed byte, -127 to +127)
-localparam [50*8-1:0] DESCRIPTOR_HID = 400'h05_01_09_02_a1_01_09_01_a1_00_05_09_19_01_29_03_15_00_25_01_75_01_95_03_81_02_95_01_75_05_81_01_05_01_09_30_09_31_09_38_15_81_25_7f_75_08_95_03_81_06_c0_c0;
+localparam [52*8-1:0] DESCRIPTOR_HID = 416'h05_01_09_02_a1_01_09_01_a1_00_05_09_19_01_29_03_15_00_25_01_75_01_95_03_81_02_95_01_75_05_81_01_05_01_09_30_09_31_09_38_15_81_25_7f_75_08_95_03_81_06_c0_c0;
 
 always @ (posedge clk)
     if (ep00_setup_cmd[15:0] == 16'h0681)
-        ep00_resp <= DESCRIPTOR_HID[ (50 - 1 - ep00_resp_idx) * 8 +: 8 ];
+        ep00_resp <= DESCRIPTOR_HID[ (52 - 1 - ep00_resp_idx) * 8 +: 8 ];
     else
         ep00_resp <= 8'h0;
 
@@ -108,7 +108,7 @@ usbfs_core_top #(
     .DESCRIPTOR_CONFIG  ( {  // 512 bytes available
         72'h09_02_22_00_01_01_00_80_64,        // configuration descriptor
         72'h09_04_00_00_01_03_01_02_00,        // interface descriptor (bInterfaceProtocol=2 for mouse)
-        72'h09_21_11_01_00_01_22_32_00,        // HID descriptor (wDescriptorLength=0x0032=50 bytes)
+        72'h09_21_11_01_00_01_22_34_00,        // HID descriptor (wDescriptorLength=0x0034=52 bytes)
         56'h07_05_81_03_04_00_0a,              // endpoint descriptor (IN, bInterval=10ms)
         3832'h0
     } ),

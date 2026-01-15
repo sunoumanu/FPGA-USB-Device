@@ -1,0 +1,78 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2A-18C" pn="GW2A-LV18PG256C8/I7">gw2a18c-011</Device>
+    <FileList>
+        <File path="RTL/fpga_examples/fpga_top_usb_mouse_gowin.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usb_class/usb_mouse_top.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_bitlevel.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_core_top.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_debug_monitor.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_debug_uart_tx.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_packet_rx.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_packet_tx.v" type="file.verilog" enable="1"/>
+        <File path="RTL/usbfs_core/usbfs_transaction.v" type="file.verilog" enable="1"/>
+        <File path="RTL/gowin_pll/Gowin_PLL.v" type="file.verilog" enable="1"/>
+        <File path="tang_nano_20k.cst" type="file.cst" enable="1"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_balance" value="0"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="usb_hid_mouse.fs"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+    <ProjectSettings>
+        <TopModule name="usb_hid_mouse_top" type="local"/>
+        <Device name="GW2A-18C" pn="GW2A-LV18PG256C8/I7">gw2a18c-011</Device>
+        <DeviceVersion>C</DeviceVersion>
+        <Package>PBGA256</Package>
+        <Speed>C8/I7</Speed>
+    </ProjectSettings>
+    <Synthesis>
+        <Settings>
+            <Option type="synthesis_tool" value="GowinSynthesis"/>
+            <Option type="default_enum_encoding" value="default"/>
+            <Option type="disable_io_insertion" value="0"/>
+            <Option type="disable_mult_replacement" value="0"/>
+            <Option type="fix_undriven_nets" value="1"/>
+            <Option type="fsm_encoding" value="auto"/>
+            <Option type="resolve_mixed_drivers" value="0"/>
+            <Option type="top_module" value="usb_hid_mouse_top"/>
+            <Option type="use_done" value="0"/>
+            <Option type="use_mspi_as_gpio" value="0"/>
+            <Option type="use_ready" value="0"/>
+            <Option type="verilog_std" value="sysv2017"/>
+        </Settings>
+    </Synthesis>
+    <Impl>
+        <DeviceOptions>
+            <Option type="bit_compress" value="0"/>
+            <Option type="bit_format" value="bin"/>
+            <Option type="bit_security" value="0"/>
+            <Option type="bit_security_user_code" value=""/>
+            <Option type="download_speed" value="default"/>
+            <Option type="hotboot_mode" value="0"/>
+            <Option type="jtagpin_index" value="0"/>
+            <Option type="multiboot_mode" value="0"/>
+            <Option type="power_analysis" value="0"/>
+            <Option type="spi_flash_address" value="0x0"/>
+            <Option type="sspi_mode" value="dual"/>
+            <Option type="use_cpu_as_gpio" value="0"/>
+        </DeviceOptions>
+        <PlaceAndRoute>
+            <Option type="effort_level" value="auto"/>
+            <Option type="route_type" value="timing"/>
+        </PlaceAndRoute>
+        <Timing>
+            <Option type="clkfreq_user_def" value="0"/>
+            <Option type="enable_timing_driven" value="1"/>
+            <Option type="report_all_clk_freq" value="0"/>
+        </Timing>   
+    </Impl> 
+</Project>

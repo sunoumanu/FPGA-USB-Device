@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
+    <FileList>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\fpga_examples\fpga_top_usb_mouse_gowin.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usb_class\usb_mouse_top.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_bitlevel.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_core_top.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_debug_monitor.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_debug_uart_tx.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_packet_rx.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_packet_tx.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\usbfs_core\usbfs_transaction.v" type="verilog"/>
+        <File path="C:\soft\dev\hardware\hid4\FPGA-USB-Device\RTL\gowin_pll\Gowin_PLL.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\soft\dev\hardware\hid4\FPGA-USB-Device\impl\gwsynthesis\usb_mouse.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="vcc" value="1.2"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>
